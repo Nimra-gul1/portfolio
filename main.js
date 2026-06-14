@@ -1,0 +1,606 @@
+/* ── PROJECT DATA ── */
+const projects = {
+  qalbify:{
+    emoji:'🫀', bannerClass:'qalbify', year:'2026', type:'AI Platform · Final Year Project',
+    title:'Qalbify',
+    tagline:"AI-powered emotional wellness with Qur'anic guidance.",
+    desc:"Qalbify is an end-to-end AI-powered emotional wellness platform I built as my Final Year Project. It combines a React Native mobile app, a React.js web admin panel, and a Node.js/MongoDB backend into a single production-ready system — deployed on Vercel.",
+    features:[
+      'Emotion detection via HuggingFace DistilRoBERTa Inference API — analyzes user emotional state in real time',
+      'OpenAI GPT-4o for empathetic, context-aware conversational responses',
+      'AssemblyAI integration for voice-based interaction and speech-to-text',
+      "Custom Qur'an dataset with verse matching, deduplication logic, and personalized spiritual guidance",
+      'Admin panel with red-flag detection, hallucination detection, content moderation, and analytics dashboard',
+      'Secure authentication using JWT, bcrypt, and Google OAuth',
+      'Streak tracking system, mood check-ins, journal features, and a breathing widget in the mobile app',
+      'Full system deployed on Vercel for production use'
+    ],
+    stack:['React Native (Expo)','React.js','Node.js','Express.js','MongoDB Atlas','OpenAI GPT-4o','HuggingFace API','AssemblyAI','JWT','Google OAuth','Vercel']
+  },
+  food:{
+    emoji:'🍜', bannerClass:'food', year:'2025', type:'Full-Stack MERN Application',
+    title:'Food Fusion',
+    tagline:'A seamless food ordering experience from browse to delivery.',
+    desc:'Food Fusion is a full-stack MERN food ordering platform built for a smooth, responsive user experience on both desktop and mobile. It covers the full ordering lifecycle — menu browsing, cart management, checkout, and order history — with a dedicated admin panel.',
+    features:[
+      'Real-time order placement and cart management with responsive UI',
+      'Menu browsing with category filtering and item detail views',
+      'User authentication with account management and order history tracking',
+      'Admin panel for restaurant management — menus, orders, and analytics',
+      'Smooth frontend-backend integration for consistent data flow and real-time updates'
+    ],
+    stack:['MongoDB','Express.js','React.js','Node.js','REST APIs','JWT Auth']
+  },
+  carzo:{
+    emoji:'🚗', bannerClass:'carzo', year:'2024', type:'Mobile Application',
+    title:'Carzo',
+    tagline:'Emergency car repair on demand, at your fingertips.',
+    desc:'Carzo is a React Native mobile app designed to connect drivers with emergency car repair services quickly and reliably. The UX is built for stress moments — clear flows, fast booking, and live service status.',
+    features:[
+      'Service booking system with a step-by-step request flow',
+      'Real-time service status tracking and push notifications',
+      'Feedback and review collection for service providers',
+      'Optimized UI for mobile responsiveness and smooth navigation across device sizes'
+    ],
+    stack:['React Native','JavaScript','REST APIs','Mobile UI']
+  },
+  tailoring:{
+    emoji:'🧵', bannerClass:'tailoring', year:'2023', type:'UI/UX Design · Figma Prototype',
+    title:'Tailoring Management System',
+    tagline:'Turning a paper-based tailoring workflow into a clean digital system.',
+    desc:"A complete UI/UX prototype designed in Figma for a tailoring service. The goal was to digitize the full workflow — from taking a customer's order to tracking its completion — in a way that's simple enough for non-technical users.",
+    features:[
+      'Order customization screens with detailed measurement and fabric selection flows',
+      'Order tracking interface showing live status from creation to completion',
+      'Customer management dashboard for tracking client history and preferences',
+      'Focused on simplicity — organized layouts, clear affordances, and minimal friction',
+      'Full clickable prototype showing how every screen connects'
+    ],
+    stack:['Figma','UI/UX Design','Wireframing','Prototyping','User Flows']
+  },
+  bank:{
+    emoji:'🏦', bannerClass:'bank', year:'2023', type:'Software System · C++',
+    title:'Bank Management System',
+    tagline:'Core banking operations modeled as structured software.',
+    desc:'A software system built to simulate and manage core banking operations. The project deepened my understanding of how real-world financial workflows can be modeled in structured code.',
+    features:[
+      'Account creation, deposit, and withdrawal operations with validation',
+      'Transaction record management with full activity history per account',
+      'Account balance inquiry and statement viewing',
+      'Focus on correct data handling and error-free execution of banking operations'
+    ],
+    stack:['C++','Object-Oriented Programming','Data Structures','File Handling']
+  },
+  library:{
+    emoji:'📚', bannerClass:'library', year:'2022', type:'Software System · C++',
+    title:'Library Management System',
+    tagline:'Replacing manual borrowing logs with digital structured software.',
+    desc:'A software system developed in C++ to manage library operations, automating book inventory, borrower transactions, and due dates.',
+    features:[
+      'Add, catalog, search, and update book inventory details',
+      'Issue and return books with automated borrowing record updates',
+      'Maintain student borrower indexes and manage overdue return flags',
+      'Improved overall data accessibility and organizational workflow efficiency'
+    ],
+    stack:['C++','Data Structures','File Handling']
+  },
+  student:{
+    emoji:'🎓', bannerClass:'library', year:'2022', type:'Software System · C++',
+    title:'Student Management System',
+    tagline:'Digital academic logging for student files, attendance, and grades.',
+    desc:'A terminal-based C++ application designed to manage student directories, attendance tracking, grades, and automatic GPA calculation.',
+    features:[
+      'Add, search, filter, and maintain detailed student profiles',
+      'Track student attendance and calculate lecture percentages',
+      'Manage academic grades and compute GPAs automatically',
+      'Generate neat formatted reports for academic monitoring'
+    ],
+    stack:['C++','OOP','File Handling']
+  }
+};
+
+/* ── PRELOADER — handled entirely by CSS animation, no JS needed ── */
+
+/* ── SCROLL PROGRESS BAR ── */
+window.addEventListener('scroll', () => {
+  const scrollProgress = document.getElementById('scrollProgress');
+  const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+  if (totalHeight > 0) {
+    const progress = (window.scrollY / totalHeight) * 100;
+    scrollProgress.style.width = `${progress}%`;
+  }
+});
+
+/* ── THEME ACCENT SYSTEM ── */
+const themeButtons = document.querySelectorAll('.theme-btn');
+const savedTheme = localStorage.getItem('nimra-accent-theme');
+
+if (savedTheme) {
+  document.body.className = savedTheme !== 'violet' ? `theme-${savedTheme}` : '';
+  themeButtons.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.theme === savedTheme);
+  });
+}
+
+themeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    themeButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const theme = btn.dataset.theme;
+    localStorage.setItem('nimra-accent-theme', theme);
+    
+    if (theme === 'violet') {
+      document.body.className = '';
+    } else {
+      document.body.className = `theme-${theme}`;
+    }
+  });
+});
+
+/* ── TYPEWRITER EFFECT ── */
+const words = ["Software Engineer.", "Full-Stack Developer.", "AI Enthusiast.", "Problem Solver."];
+let i = 0;
+let timer;
+
+function typingEffect() {
+  const word = words[i].split("");
+  const loopTyping = () => {
+    if (word.length > 0) {
+      document.getElementById('typedText').innerHTML += word.shift();
+    } else {
+      setTimeout(deletingEffect, 2000);
+      return false;
+    }
+    timer = setTimeout(loopTyping, 100);
+  };
+  loopTyping();
+}
+
+function deletingEffect() {
+  const word = words[i].split("");
+  const loopDeleting = () => {
+    if (word.length > 0) {
+      word.pop();
+      document.getElementById('typedText').innerHTML = word.join("");
+    } else {
+      if (words.length > (i + 1)) {
+        i++;
+      } else {
+        i = 0;
+      }
+      setTimeout(typingEffect, 500);
+      return false;
+    }
+    timer = setTimeout(loopDeleting, 60);
+  };
+  loopDeleting();
+}
+
+// Start typewriter after preloader finishes (preloader fades at ~2.6s)
+setTimeout(typingEffect, 2800);
+
+/* ── INTERACTIVE CANVAS PARTICLES ── */
+const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
+let particlesArray = [];
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+const mouse = {
+  x: null,
+  y: null,
+  radius: 120
+};
+
+window.addEventListener('mousemove', (e) => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+});
+
+window.addEventListener('mouseleave', () => {
+  mouse.x = null;
+  mouse.y = null;
+});
+
+class Particle {
+  constructor(x, y, directionX, directionY, size, color) {
+    this.x = x;
+    this.y = y;
+    this.directionX = directionX;
+    this.directionY = directionY;
+    this.size = size;
+    this.color = color;
+  }
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+  }
+  update() {
+    if (this.x > canvas.width || this.x < 0) {
+      this.directionX = -this.directionX;
+    }
+    if (this.y > canvas.height || this.y < 0) {
+      this.directionY = -this.directionY;
+    }
+    
+    // Check mouse proximity
+    let dx = mouse.x - this.x;
+    let dy = mouse.y - this.y;
+    let distance = Math.sqrt(dx*dx + dy*dy);
+    if (distance < mouse.radius + this.size) {
+      if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+        this.x += 2;
+      }
+      if (mouse.x > this.x && this.x > this.size * 10) {
+        this.x -= 2;
+      }
+      if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+        this.y += 2;
+      }
+      if (mouse.y > this.y && this.y > this.size * 10) {
+        this.y -= 2;
+      }
+    }
+    this.x += this.directionX;
+    this.y += this.directionY;
+    this.draw();
+  }
+}
+
+function initParticles() {
+  particlesArray = [];
+  let numberOfParticles = (canvas.width * canvas.height) / 16000;
+  numberOfParticles = Math.min(numberOfParticles, 80); // Cap at 80 for perf
+  
+  for (let i = 0; i < numberOfParticles; i++) {
+    let size = (Math.random() * 1.5) + 0.5;
+    let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
+    let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
+    let directionX = (Math.random() * 0.4) - 0.2;
+    let directionY = (Math.random() * 0.4) - 0.2;
+    particlesArray.push(new Particle(x, y, directionX, directionY, size, ''));
+  }
+}
+
+function getAccentColor() {
+  return getComputedStyle(document.body).getPropertyValue('--accent-bright').trim() || '#9D6FFF';
+}
+
+function animateParticles() {
+  requestAnimationFrame(animateParticles);
+  ctx.clearRect(0, 0, innerWidth, innerHeight);
+  
+  const particleColor = getAccentColor();
+  
+  for (let i = 0; i < particlesArray.length; i++) {
+    particlesArray[i].color = particleColor;
+    particlesArray[i].update();
+  }
+  connectParticles(particleColor);
+}
+
+function connectParticles(color) {
+  let opacityValue = 1;
+  for (let a = 0; a < particlesArray.length; a++) {
+    for (let b = a; b < particlesArray.length; b++) {
+      let dx = particlesArray[a].x - particlesArray[b].x;
+      let dy = particlesArray[a].y - particlesArray[b].y;
+      let distance = Math.sqrt(dx*dx + dy*dy);
+      
+      if (distance < 110) {
+        opacityValue = 1 - (distance / 110);
+        ctx.strokeStyle = color.replace(')', `, ${opacityValue * 0.15})`).replace('rgb', 'rgba').replace('#', 'rgba(');
+        // Fallback for hex conversion in style connections
+        if (color.startsWith('#')) {
+          const r = parseInt(color.slice(1, 3), 16);
+          const g = parseInt(color.slice(3, 5), 16);
+          const b = parseInt(color.slice(5, 7), 16);
+          ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${opacityValue * 0.15})`;
+        }
+        ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+        ctx.stroke();
+      }
+    }
+  }
+}
+
+initParticles();
+animateParticles();
+
+/* ── STATS COUNTER ANIMATION ── */
+const statsSection = document.querySelector('.stats-grid');
+const statNumbers = document.querySelectorAll('.stat-num');
+
+const countUp = (el) => {
+  const target = parseInt(el.getAttribute('data-val'));
+  let count = 0;
+  const speed = 120 / target;
+  
+  const increment = () => {
+    if (count < target) {
+      count++;
+      if (el.innerText.includes('+')) {
+        el.innerHTML = `${count}<span>+</span>`;
+      } else if (el.innerText.includes('yr')) {
+        el.innerHTML = `${count}<span>yr</span>`;
+      } else if (el.innerText.includes('✦')) {
+        el.innerHTML = `${count}<span>✦</span>`;
+      } else {
+        el.innerHTML = `${count}<span></span>`;
+      }
+      setTimeout(increment, speed);
+    }
+  };
+  increment();
+};
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      statNumbers.forEach(num => countUp(num));
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+if (statsSection) {
+  statsObserver.observe(statsSection);
+}
+
+/* ── 3D TILT EFFECT ON CARDS ── */
+const cards = document.querySelectorAll('.proj-tile');
+
+cards.forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = ((centerY - y) / centerY) * 6; // Max 6 degrees
+    const rotateY = ((x - centerX) / centerX) * 6;
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
+
+/* ── CONTACT FORM HANDLER (MOCK SUCCESS) ── */
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+const submitBtn = document.getElementById('submitBtn');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('formName').value;
+    const email = document.getElementById('formEmail').value;
+    const message = document.getElementById('formMessage').value;
+    
+    // Disable inputs & show loading status
+    submitBtn.disabled = true;
+    const origBtnText = submitBtn.querySelector('span').innerText;
+    submitBtn.querySelector('span').innerText = 'Sending...';
+    
+    setTimeout(() => {
+      // Create mock success feedback
+      formStatus.innerText = `Thanks ${name}! Nimra will get back to you shortly.`;
+      formStatus.className = 'form-status success';
+      
+      // Store in LocalStorage for demonstration / persistence
+      const submissions = JSON.parse(localStorage.getItem('portfolio-contacts') || '[]');
+      submissions.push({ name, email, message, date: new Date().toISOString() });
+      localStorage.setItem('portfolio-contacts', JSON.stringify(submissions));
+      
+      // Reset Form & Button
+      contactForm.reset();
+      submitBtn.disabled = false;
+      submitBtn.querySelector('span').innerText = origBtnText;
+      
+      // Fade out status after 5s
+      setTimeout(() => {
+        formStatus.style.opacity = '0';
+        setTimeout(() => {
+          formStatus.className = 'form-status';
+          formStatus.style.opacity = '';
+        }, 300);
+      }, 5000);
+      
+    }, 1500);
+  });
+}
+
+/* ── MODAL LOGIC ── */
+const overlay = document.getElementById('modalOverlay');
+const modalBanner = document.getElementById('modalBanner');
+const modalContent = document.getElementById('modalContent');
+const modalClose = document.getElementById('modalClose');
+
+function openModal(key) {
+  const p = projects[key];
+  if(!p) return;
+  modalBanner.className = `modal-banner ${p.bannerClass}`;
+  modalBanner.innerHTML = `<span style="font-size:5.5rem;position:relative;z-index:1">${p.emoji}</span>`;
+  modalContent.innerHTML = `
+    <div class="modal-year-badge">${p.year} · ${p.type}</div>
+    <div class="modal-title">${p.title}</div>
+    <div class="modal-tagline">${p.tagline}</div>
+    <div class="modal-section-label">Overview</div>
+    <div class="modal-desc">${p.desc}</div>
+    <div class="modal-section-label">What I built</div>
+    <ul class="modal-features">${p.features.map(f=>`<li>${f}</li>`).join('')}</ul>
+    <div class="modal-section-label">Tech stack</div>
+    <div class="modal-stack-row">${p.stack.map(s=>`<span class="modal-stack-chip">${s}</span>`).join('')}</div>
+  `;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+modalClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+document.querySelectorAll('.proj-tile').forEach(tile => {
+  tile.addEventListener('click', () => openModal(tile.dataset.project));
+});
+
+/* ── FILTER ── */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const f = this.dataset.filter;
+    document.querySelectorAll('.proj-tile').forEach(tile => {
+      const cats = tile.dataset.cats || '';
+      const show = f === 'all' || cats.includes(f);
+      tile.style.opacity = show ? '1' : '0.2';
+      tile.style.pointerEvents = show ? 'auto' : 'none';
+      tile.style.transform = show ? '' : 'scale(.97)';
+    });
+  });
+});
+
+/* ── SCROLL REVEAL ── */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObs.unobserve(e.target); // stop observing once visible
+    }
+  });
+}, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// Immediately reveal any elements already in the viewport on page load
+setTimeout(() => {
+  document.querySelectorAll('.reveal').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      el.classList.add('visible');
+    }
+  });
+}, 100);
+
+/* ── NAV SCROLL ── */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ── HAMBURGER MENU ── */
+const hamburger = document.getElementById('navHamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('mobile-open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('mobile-open');
+  });
+});
+
+/* ── CUSTOM CURSOR ── */
+const dot = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mx=0, my=0, rx=0, ry=0;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  dot.style.left = mx - 4 + 'px';
+  dot.style.top = my - 4 + 'px';
+});
+
+function animRing() {
+  rx += (mx - rx) * .12;
+  ry += (my - ry) * .12;
+  ring.style.left = rx + 'px';
+  ring.style.top = ry + 'px';
+  requestAnimationFrame(animRing);
+}
+animRing();
+
+document.querySelectorAll('a,button,.proj-tile,.interest-pill,.chip').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    dot.style.transform = 'scale(2)';
+    ring.style.width = '56px';
+    ring.style.height = '56px';
+    ring.style.marginLeft = '-10px';
+    ring.style.marginTop = '-10px';
+    ring.style.borderColor = getAccentColor();
+  });
+  el.addEventListener('mouseleave', () => {
+    dot.style.transform = 'scale(1)';
+    ring.style.width = '36px';
+    ring.style.height = '36px';
+    ring.style.marginLeft = '0';
+    ring.style.marginTop = '0';
+    ring.style.borderColor = '';
+  });
+});
+
+/* ── CV / RESUME MODAL HANDLERS ── */
+const cvOverlay = document.getElementById('cvModalOverlay');
+const cvBox = document.getElementById('cvModalBox');
+const cvClose = document.getElementById('cvModalClose');
+const openCvBtn = document.getElementById('openCvBtn');
+const heroOpenCvBtn = document.getElementById('heroOpenCvBtn');
+const printCvBtn = document.getElementById('printCvBtn');
+
+function openCvModal() {
+  if (cvOverlay) {
+    cvOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeCvModal() {
+  if (cvOverlay) {
+    cvOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+if (openCvBtn) openCvBtn.addEventListener('click', openCvModal);
+if (heroOpenCvBtn) heroOpenCvBtn.addEventListener('click', openCvModal);
+if (cvClose) cvClose.addEventListener('click', closeCvModal);
+if (cvOverlay) {
+  cvOverlay.addEventListener('click', e => {
+    if (e.target === cvOverlay) closeCvModal();
+  });
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeCvModal();
+});
+
+if (printCvBtn) {
+  printCvBtn.addEventListener('click', () => {
+    window.print();
+  });
+}
+

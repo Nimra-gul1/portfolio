@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nimra Gul — Software Engineer</title>
+<meta name="description" content="Nimra Gul — Software Engineer based in Islamabad, Pakistan. Building full-stack digital experiences with React, Node.js, and AI."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+
+<!-- SCROLL PROGRESS -->
+<div id="scrollProgress"></div>
+
+<!-- BACKGROUND CANVAS FOR PARTICLES -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- FLOATING ACCENT THEME PANEL -->
+<div class="theme-panel">
+  <span class="theme-panel-label">Accent</span>
+  <button class="theme-btn t-violet active" data-theme="violet" title="Violet Accent"></button>
+  <button class="theme-btn t-emerald" data-theme="emerald" title="Emerald Accent"></button>
+  <button class="theme-btn t-gold" data-theme="gold" title="Gold Accent"></button>
+  <button class="theme-btn t-blue" data-theme="blue" title="Blue Accent"></button>
+</div>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" href="#hero">nimra<span>.dev</span></a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button class="nav-cv-btn" id="openCvBtn">View Resume</button></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-inner">
+    <div class="hero-availability">
+      <div class="availability-dot"></div>
+      Open to full-time roles
+    </div>
+    <h1 class="hero-h1">
+      <span class="name-first">Nimra</span>
+      <span class="name-last">Gul</span>
+      <span class="name-role">I am a <span class="typed-text" id="typedText"></span></span>
+    </h1>
+    <p class="hero-desc">
+      I build <em>full-stack digital experiences</em> — from AI-powered mobile apps to scalable web platforms. Based in Islamabad, recently graduated in Software Engineering with a focus on <em>emotionally intelligent technology</em>.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-glow">View my work</a>
+      <button class="btn-ghost" id="heroOpenCvBtn">View Resume</button>
+      <a href="#contact" class="btn-ghost">Get in touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    scroll to explore
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-wrap alt-bg" id="about">
+  <div class="about-grid">
+    <div class="about-text reveal r-left">
+      <div class="section-label">About me</div>
+      <h2 class="section-h2" style="margin-bottom:32px">Building software<br>with purpose.</h2>
+      <p>I'm a tech-driven software engineer with a strong foundation in <em>full-stack development</em> — working across React Native, React.js, Node.js, and MongoDB to ship real, working products. I care about the intersection of good engineering and meaningful user experience.</p>
+      <p>My final year project, <em>Qalbify</em>, is the clearest expression of that: an AI-powered emotional wellness platform that integrates emotion detection, Qur'anic guidance, and intelligent conversation into a single cohesive system — built entirely by me.</p>
+      <div class="about-contact-row">
+        <div class="about-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+          Islamabad, Pakistan
+        </div>
+        <div class="about-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          nimraofficial121@gmail.com
+        </div>
+        <div class="about-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.11 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          +92 334 1019162
+        </div>
+      </div>
+    </div>
+    <div class="stats-grid reveal r-right">
+      <div class="stat-block">
+        <div class="stat-num" data-val="7">0<span>+</span></div>
+        <div class="stat-label">Projects shipped</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num" data-val="4">0<span>yr</span></div>
+        <div class="stat-label">Degree completed</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num" data-val="3">0<span>+</span></div>
+        <div class="stat-label">AI APIs integrated</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num" data-val="1">0<span>✦</span></div>
+        <div class="stat-label">End-to-end platform built</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section-wrap" id="skills">
+  <div class="section-header reveal">
+    <div class="section-label">Technical skills</div>
+    <h2 class="section-h2">What I work with.</h2>
+  </div>
+  <div class="skills-layout">
+    <div class="skill-panel reveal reveal-delay-1">
+      <div class="skill-panel-head">
+        <div class="skill-icon vi">⚛️</div>
+        <div class="skill-panel-title">Frontend Development</div>
+      </div>
+      <div class="chip-row">
+        <span class="chip hi">React.js</span>
+        <span class="chip hi">React Native</span>
+        <span class="chip hi">TypeScript</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">HTML5</span>
+        <span class="chip">CSS3</span>
+        <span class="chip">Expo</span>
+        <span class="chip">Responsive UI</span>
+      </div>
+    </div>
+    <div class="skill-panel reveal reveal-delay-2">
+      <div class="skill-panel-head">
+        <div class="skill-icon vi">🔧</div>
+        <div class="skill-panel-title">Backend & Database</div>
+      </div>
+      <div class="chip-row">
+        <span class="chip hi">Node.js</span>
+        <span class="chip hi">Express.js</span>
+        <span class="chip hi">MongoDB</span>
+        <span class="chip">REST APIs</span>
+        <span class="chip">JWT</span>
+        <span class="chip">bcrypt</span>
+        <span class="chip">Google OAuth</span>
+        <span class="chip">MongoDB Atlas</span>
+      </div>
+    </div>
+    <div class="skill-panel reveal reveal-delay-3">
+      <div class="skill-panel-head">
+        <div class="skill-icon go">🤖</div>
+        <div class="skill-panel-title">AI & Integrations</div>
+      </div>
+      <div class="chip-row">
+        <span class="chip hi">OpenAI GPT-4o</span>
+        <span class="chip hi">HuggingFace API</span>
+        <span class="chip hi">AssemblyAI</span>
+        <span class="chip">DistilRoBERTa</span>
+        <span class="chip">Emotion Detection</span>
+        <span class="chip">NLP</span>
+      </div>
+    </div>
+    <div class="skill-panel reveal reveal-delay-4">
+      <div class="skill-panel-head">
+        <div class="skill-icon vi">🛠</div>
+        <div class="skill-panel-title">Tools & Design</div>
+      </div>
+      <div class="chip-row">
+        <span class="chip hi">Figma</span>
+        <span class="chip hi">Git / GitHub</span>
+        <span class="chip">Vercel</span>
+        <span class="chip">Postman</span>
+        <span class="chip">Linux</span>
+        <span class="chip">UI/UX Design</span>
+        <span class="chip">Wireframing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section-wrap alt-bg" id="projects">
+  <div class="section-header reveal">
+    <div class="section-label">Selected work</div>
+    <h2 class="section-h2">Projects I've built.</h2>
+  </div>
+  <div class="projects-filter reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+    <button class="filter-btn" data-filter="mobile">Mobile</button>
+    <button class="filter-btn" data-filter="ai">AI-Powered</button>
+    <button class="filter-btn" data-filter="uiux">UI/UX</button>
+  </div>
+  <div class="projects-grid" id="projectsGrid">
+    <div class="proj-tile reveal reveal-delay-1" data-cats="fullstack mobile ai" data-project="qalbify">
+      <div class="featured-badge">★ FYP</div>
+      <div class="proj-tile-banner qalbify"><span class="banner-icon">🫀</span></div>
+      <div class="proj-tile-body">
+        <div class="proj-tile-year">2026 · AI Platform · FYP</div>
+        <div class="proj-tile-name">Qalbify</div>
+        <div class="proj-tile-short">End-to-end AI emotional wellness platform with Qur'anic guidance — mobile app, web admin, and backend unified.</div>
+        <div class="proj-tile-stack">
+          <span class="mini-chip">React Native</span><span class="mini-chip">GPT-4o</span><span class="mini-chip">Node.js</span><span class="mini-chip">MongoDB</span>
+        </div>
+      </div>
+      <div class="proj-tile-arrow">→</div>
+    </div>
+    <div class="proj-tile reveal reveal-delay-2" data-cats="fullstack" data-project="food">
+      <div class="proj-tile-banner food"><span class="banner-icon">🍜</span></div>
+      <div class="proj-tile-body">
+        <div class="proj-tile-year">2025 · Full-Stack MERN</div>
+        <div class="proj-tile-name">Food Fusion</div>
+        <div class="proj-tile-short">Seamless food ordering system with real-time order management, cart, auth, and an admin panel — built on the MERN stack.</div>
+        <div class="proj-tile-stack">
+          <span class="mini-chip">React.js</span><span class="mini-chip">Express</span><span class="mini-chip">MongoDB</span>
+        </div>
+      </div>
+      <div class="proj-tile-arrow">→</div>
+    </div>
+    <div class="proj-tile reveal reveal-delay-3" data-cats="mobile" data-project="carzo">
+      <div class="proj-tile-banner carzo"><span class="banner-icon">🚗</span></div>
+      <div class="proj-tile-body">
+        <div class="proj-tile-year">2024 · Mobile App</div>
+        <div class="proj-tile-name">Carzo</div>
+        <div class="proj-tile-short">On-demand emergency car repair service app — booking, service tracking, notifications, and feedback built in React Native.</div>
+        <div class="proj-tile-stack">
+          <span class="mini-chip">React Native</span><span class="mini-chip">JavaScript</span>
+        </div>
+      </div>
+      <div class="proj-tile-arrow">→</div>
+    </div>
+    <div class="proj-tile reveal reveal-delay-1" data-cats="uiux" data-project="tailoring">
+      <div class="proj-tile-banner tailoring"><span class="banner-icon">🧵</span></div>
+      <div class="proj-tile-body">
+        <div class="proj-tile-year">2023 · UI/UX Design</div>
+        <div class="proj-tile-name">Tailoring Management System</div>
+        <div class="proj-tile-short">Complete Figma prototype covering order flow, tracking, and customer management for a tailoring service.</div>
+        <div class="proj-tile-stack">
+          <span class="mini-chip">Figma</span><span class="mini-chip">Prototyping</span>
+        </div>
+      </div>
+      <div class="proj-tile-arrow">→</div>
+    </div>
+    <div class="proj-tile reveal reveal-delay-2" data-cats="fullstack" data-project="bank">
+      <div class="proj-tile-banner bank"><span class="banner-icon">🏦</span></div>
+      <div class="proj-tile-body">
+        <div class="proj-tile-year">2023 · Software System</div>
+        <div class="proj-tile-name">Bank Management System</div>
+        <div class="proj-tile-short">Core banking system — account creation, deposits, withdrawals, transaction records, and activity tracking.</div>
+        <div class="proj-tile-stack">
+          <span class="mini-chip">C++</span><span class="mini-chip">OOP</span>
+        </div>
+      </div>
+      <div class="proj-tile-arrow">→</div>
+    </div>
+    <div class="proj-tile reveal reveal-delay-3" data-cats="fullstack" data-project="library">
+      <div class="proj-tile-banner library"><span class="banner-icon">📚</span></div>
+      <div class="proj-tile-body">
+        <div class="proj-tile-year">2022 · Software System</div>
+        <div class="proj-tile-name">Library Management System</div>
+        <div class="proj-tile-short">Digital software to replace paper library logs — tracking inventory, book issues, and student borrowing records.</div>
+        <div class="proj-tile-stack">
+          <span class="mini-chip">C++</span><span class="mini-chip">Data Structures</span>
+        </div>
+      </div>
+      <div class="proj-tile-arrow">→</div>
+    </div>
+    <div class="proj-tile reveal reveal-delay-1" data-cats="fullstack" data-project="student">
+      <div class="proj-tile-banner library" style="background: linear-gradient(135deg, #0A142A, #122448, #050E20);"><span class="banner-icon">🎓</span></div>
+      <div class="proj-tile-body">
+        <div class="proj-tile-year">2022 · Software System</div>
+        <div class="proj-tile-name">Student Management System</div>
+        <div class="proj-tile-short">C++ application to manage student information, directories, attendance tracking, grades, and GPA calculations.</div>
+        <div class="proj-tile-stack">
+          <span class="mini-chip">C++</span><span class="mini-chip">OOP</span>
+        </div>
+      </div>
+      <div class="proj-tile-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section-wrap" id="education">
+  <div class="section-header reveal">
+    <div class="section-label">Background</div>
+    <h2 class="section-h2">Education.</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card reveal reveal-delay-1">
+      <div class="edu-period">2022 – 2026</div>
+      <div class="edu-degree">Bachelor's in Software Engineering</div>
+      <div class="edu-inst">Riphah International University, Islamabad</div>
+      <div class="edu-tag" style="background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.2); color: #34d399;">Completed / Graduated</div>
+    </div>
+    <div class="edu-card reveal reveal-delay-2">
+      <div class="edu-period">2020 – 2022</div>
+      <div class="edu-degree">Intermediate</div>
+      <div class="edu-inst">Bahria College, Anchorage</div>
+      <div class="edu-tag">Completed</div>
+    </div>
+  </div>
+  <div style="margin-top:72px" class="reveal">
+    <div class="section-label" style="margin-bottom:28px">Interests</div>
+    <div class="interests-row">
+      <div class="interest-pill">Project Management</div>
+      <div class="interest-pill">Web Development & Design Trends</div>
+      <div class="interest-pill">Mobile App Innovation</div>
+      <div class="interest-pill">Problem Solving</div>
+      <div class="interest-pill">Learning New Technologies</div>
+      <div class="interest-pill">Creative Development</div>
+      <div class="interest-pill">AI & Machine Learning</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-wrap alt-bg" id="contact">
+  <div class="contact-grid reveal">
+    <div class="contact-wrap">
+      <div class="section-label">Say hello</div>
+      <div class="contact-big">Let's build<br><span>something great.</span></div>
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:nimraofficial121@gmail.com">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-label">Email</div>
+            <div class="contact-card-value">nimraofficial121@gmail.com</div>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a class="contact-card" href="tel:+923341019162">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.11 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-label">Phone</div>
+            <div class="contact-card-value">+92 334 1019162</div>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a class="contact-card" href="https://github.com/Nimra-gul1" target="_blank" rel="noopener">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-label">GitHub</div>
+            <div class="contact-card-value">github.com/Nimra-gul1</div>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/nimra-gul-25020b310" target="_blank" rel="noopener">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <div class="contact-card-label">LinkedIn</div>
+            <div class="contact-card-value">linkedin.com/in/nimra-gul-25020b310</div>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- EMAIL CONTACT FORM -->
+    <div class="contact-form-container">
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" id="formName" class="form-input" placeholder=" " required />
+          <label for="formName" class="form-label">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="formEmail" class="form-input" placeholder=" " required />
+          <label for="formEmail" class="form-label">Your Email</label>
+        </div>
+        <div class="form-group">
+          <textarea id="formMessage" class="form-input" placeholder=" " required></textarea>
+          <label for="formMessage" class="form-label">Your Message</label>
+        </div>
+        <button type="submit" class="form-submit-btn" id="submitBtn">
+          <span>Send Message</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">nimra<span>.dev</span></div>
+  <div class="footer-copy">© 2026 Nimra Gul · Islamabad, Pakistan</div>
+</footer>
+
+<!-- PROJECT MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+    <div class="modal-banner" id="modalBanner"></div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<!-- FORMAL RESUME / CV MODAL -->
+<div class="cv-modal-overlay" id="cvModalOverlay">
+  <div class="cv-modal-box" id="cvModalBox">
+    <div class="cv-modal-header">
+      <div class="cv-modal-header-title">Formal Resume / CV</div>
+      <div class="cv-modal-actions">
+        <button class="cv-action-btn" id="printCvBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>
+          Print / Save PDF
+        </button>
+        <button class="cv-modal-close" id="cvModalClose">✕</button>
+      </div>
+    </div>
+    <div class="cv-paper-container">
+      <div class="resume-paper" id="printableResume">
+        <header class="resume-header">
+          <h1>NIMRA GUL</h1>
+          <p class="resume-subtitle">Software Engineer</p>
+          <div class="resume-meta">
+            <span><strong>Phone:</strong> 03341019162</span> | 
+            <span><strong>Email:</strong> nimraofficial121@gmail.com</span> | 
+            <span><strong>Location:</strong> Islamabad</span>
+          </div>
+        </header>
+        
+        <section class="resume-section">
+          <h2>Summary</h2>
+          <p>I am a tech driven software engineer with a strong foundation in both web and mobile application development. I work with React.js, React Native, Node.js, HTML, CSS, and JavaScript to create clean, responsive, and user-friendly digital experiences. I have experience building full stack applications, mobile apps and intuitive UI/UX designs that solve real-world problems. I enjoy developing innovative solutions, enhancing usability and designing efficient interfaces that improve the overall user experience. I am passionate about learning new technologies, tackling complex challenges and staying updated with current trends in the software development landscape. I aim to contribute to meaningful projects where I can apply my skills, collaborate effectively, and deliver high-quality solutions.</p>
+        </section>
+
+        <section class="resume-section">
+          <h2>Key Achievements</h2>
+          <ul>
+            <li>Successfully developed and delivered Qalbify, an end-to-end AI-powered emotional wellness platform integrating mobile app, web admin panel, and backend system into a single unified product.</li>
+            <li>Built a meaningful real-world solution focused on improving emotional and spiritual well-being through intelligent, user-centered digital experiences.</li>
+            <li>Designed and developed a complete Tailoring Management System UI/UX prototype, improving workflow efficiency for order customization, tracking, and customer management processes.</li>
+            <li>Demonstrated strong capability to independently convert real-world problems into structured, functional software solutions with practical usability.</li>
+          </ul>
+        </section>
+
+        <section class="resume-section">
+          <h2>Technical Skills & Expertise</h2>
+          <div class="resume-skills-grid">
+            <div class="resume-skills-col">
+              <strong>Core Development:</strong> React.js, React Native, Node.js, Express.js, MongoDB, REST APIs
+            </div>
+            <div class="resume-skills-col">
+              <strong>Languages & Web Technologies:</strong> JavaScript, TypeScript, HTML5, CSS3, C++
+            </div>
+            <div class="resume-skills-col">
+              <strong>Tools & Hosting:</strong> Git, GitHub, API Integration, Postman, Figma, Linux, Vercel
+            </div>
+            <div class="resume-skills-col">
+              <strong>Professional Expertise:</strong> UI/UX Designing, Wireframing, Project Management, Problem Solving, Teamwork, Leadership
+            </div>
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <h2>Projects</h2>
+          <div class="resume-proj-item">
+            <div class="resume-proj-header">
+              <strong>Qalbify (Final Year Project)</strong>
+              <span>2026</span>
+            </div>
+            <ul>
+              <li>Developed an AI-driven Android app using React Native (Expo) and a web-based admin panel using React.js.</li>
+              <li>Built backend services using Node.js, Express.js, and MongoDB Atlas with a custom Qur’an dataset.</li>
+              <li>Integrated emotion detection using Hugging Face Inference API (DistilRoBERTa) to analyze user emotions.</li>
+              <li>Used OpenAI API and AssemblyAI for intelligent responses and voice-based interaction features.</li>
+              <li>Implemented secure authentication using JWT, bcrypt, and Google OAuth; deployed the system on Vercel.</li>
+            </ul>
+          </div>
+
+          <div class="resume-proj-item">
+            <div class="resume-proj-header">
+              <strong>Food Fusion</strong>
+              <span>2025</span>
+            </div>
+            <ul>
+              <li>Developed a full-stack MERN application for a food ordering system with category filter menu, checkout cart, and a custom admin dashboard.</li>
+              <li>Built functionality for user authentication and order history tracking, managing menus and order handling.</li>
+            </ul>
+          </div>
+
+          <div class="resume-proj-item">
+            <div class="resume-proj-header">
+              <strong>Carzo</strong>
+              <span>2024</span>
+            </div>
+            <ul>
+              <li>Built a mobile application using React Native and JavaScript to provide emergency car repair services.</li>
+              <li>Included booking system, service status tracking, push notifications, and customer feedback collection.</li>
+            </ul>
+          </div>
+
+          <div class="resume-proj-item">
+            <div class="resume-proj-header">
+              <strong>Tailoring Management System</strong>
+              <span>2023</span>
+            </div>
+            <ul>
+              <li>Designed a complete Figma prototype covering custom tailoring measurements, order tracking, and client logs.</li>
+            </ul>
+          </div>
+
+          <div class="resume-proj-item">
+            <div class="resume-proj-header">
+              <strong>Bank Management System</strong>
+              <span>2023</span>
+            </div>
+            <ul>
+              <li>Developed a software system in C++ managing accounts, deposits, withdrawals, and ledger transaction tracking.</li>
+            </ul>
+          </div>
+
+          <div class="resume-proj-item">
+            <div class="resume-proj-header">
+              <strong>Library Management System</strong>
+              <span>2022</span>
+            </div>
+            <ul>
+              <li>Developed a C++ system handling book categories, issue/return operations, and student borrowing logs.</li>
+            </ul>
+          </div>
+
+          <div class="resume-proj-item">
+            <div class="resume-proj-header">
+              <strong>Student Management System</strong>
+              <span>2022</span>
+            </div>
+            <ul>
+              <li>Developed a C++ terminal application to manage student indexes, directories, attendance logs, and GPAs.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <h2>Education</h2>
+          <div class="resume-edu-item">
+            <div><strong>Bachelor's in Software Engineering</strong> — Riphah International University, Islamabad</div>
+            <span class="resume-date">2022 – 2026</span>
+          </div>
+          <div class="resume-edu-item">
+            <div><strong>Intermediate</strong> — Bahria College, Anchorage</div>
+            <span class="resume-date">2020 – 2022</span>
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <h2>Languages</h2>
+          <p>English (Fluent), Urdu (Native)</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
