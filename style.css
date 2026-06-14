@@ -1491,7 +1491,7 @@ footer {
   visibility: visible;
 }
 .cv-modal-box {
-  background: var(--bg2);
+  background: #1a1c2a;
   border: 1px solid var(--border);
   border-radius: 20px;
   width: 100%;
@@ -1567,7 +1567,7 @@ footer {
 .cv-paper-container {
   padding: 32px;
   overflow-y: auto;
-  background: #0d0e15;
+  background: #dde1ea;
   display: flex;
   justify-content: center;
 }
