@@ -11,7 +11,6 @@
 </head>
 <body>
 
-
 <!-- SCROLL PROGRESS -->
 <div id="scrollProgress"></div>
 
@@ -70,6 +69,49 @@
       <a href="#contact" class="btn-ghost">Get in touch</a>
     </div>
   </div>
+
+  <!-- HERO RIGHT — 3D CUBE -->
+  <div class="hero-visual">
+    <div class="cube-scene">
+      <div class="orbit-ring orbit1"><div class="orbit-dot"></div></div>
+      <div class="orbit-ring orbit2"><div class="orbit-dot"></div></div>
+      <div class="cube-glow-ring"></div>
+      <div class="cube-glow-ring2"></div>
+      <div class="ground-reflect"></div>
+
+      <div class="cube-perspective">
+        <div class="cube" id="heroCube">
+          <div class="face face-front">
+            <div class="face-logo">⚛️</div>
+            <div class="face-label">React</div>
+          </div>
+          <div class="face face-back">
+            <div class="face-logo">🤖</div>
+            <div class="face-label">GPT-4o</div>
+          </div>
+          <div class="face face-right">
+            <div class="face-logo">🟦</div>
+            <div class="face-label">TypeScript</div>
+          </div>
+          <div class="face face-left">
+            <div class="face-logo">🟢</div>
+            <div class="face-label">Node.js</div>
+          </div>
+          <div class="face face-top">
+            <div class="face-logo">🍃</div>
+            <div class="face-label">MongoDB</div>
+          </div>
+          <div class="face face-bottom">
+            <div class="face-logo">📱</div>
+            <div class="face-label">React Native</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cube-tag">core · tech · stack</div>
+    </div>
+  </div>
+
   <div class="hero-scroll">
     <div class="scroll-line"></div>
     scroll to explore
@@ -197,28 +239,71 @@
     <div class="section-label">Selected work</div>
     <h2 class="section-h2">Projects I've built.</h2>
   </div>
-  <div class="projects-filter reveal">
-    <button class="filter-btn active" data-filter="all">All</button>
+
+  <!-- FEATURED PROJECT CARD -->
+  <div class="featured-project-card reveal">
+    <div class="featured-project-wrapper">
+      <div class="featured-project-image">
+        <div class="project-image-placeholder qalbify-bg">
+          <span class="project-image-icon">🫀</span>
+        </div>
+      </div>
+      <div class="featured-project-content">
+        <div class="featured-badge">★ Final Year Project</div>
+        <h3 class="featured-project-title">AI-Powered Emotional Support Platform</h3>
+        <div class="featured-project-subtitle">Qalbify</div>
+        <p class="featured-project-description">
+          Developed a comprehensive AI-powered emotional wellness platform that analyzes user emotions and provides personalized Qur'anic guidance, duas, and supportive conversation. The system features emotion detection powered by machine learning, intelligent response generation, and a complete end-to-end ecosystem including mobile app, web admin panel, and scalable backend infrastructure.
+        </p>
+        <div class="project-features">
+          <div class="feature-item">✅ Emotion Detection with AI</div>
+          <div class="feature-item">✅ Personalized Qur'an Recommendations</div>
+          <div class="feature-item">✅ User Authentication & Security</div>
+          <div class="feature-item">✅ Admin Dashboard</div>
+          <div class="feature-item">✅ Real-time Notifications</div>
+          <div class="feature-item">✅ Voice-based Interaction</div>
+        </div>
+        <div class="project-tech-section">
+          <div class="tech-label">Technologies Used:</div>
+          <div class="tech-chips">
+            <span class="tech-chip">React Native (Expo)</span>
+            <span class="tech-chip">React.js</span>
+            <span class="tech-chip">Node.js</span>
+            <span class="tech-chip">Express.js</span>
+            <span class="tech-chip">MongoDB Atlas</span>
+            <span class="tech-chip">OpenAI GPT-4o</span>
+            <span class="tech-chip">HuggingFace API</span>
+            <span class="tech-chip">AssemblyAI</span>
+            <span class="tech-chip">JWT & bcrypt</span>
+            <span class="tech-chip">Vercel</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Nimra-gul1" target="_blank" rel="noopener" class="project-link-btn github-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub Repository
+          </a>
+          <a href="#" class="project-link-btn demo-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+            View Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="projects-filter reveal" style="margin-top:80px;margin-bottom:40px;">
+    <button class="filter-btn active" data-filter="all">All Projects</button>
     <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
     <button class="filter-btn" data-filter="mobile">Mobile</button>
     <button class="filter-btn" data-filter="ai">AI-Powered</button>
     <button class="filter-btn" data-filter="uiux">UI/UX</button>
   </div>
+
+  <!-- PROJECT TILES GRID -->
   <div class="projects-grid" id="projectsGrid">
-    <div class="proj-tile reveal reveal-delay-1" data-cats="fullstack mobile ai" data-project="qalbify">
-      <div class="featured-badge">★ FYP</div>
-      <div class="proj-tile-banner qalbify"><span class="banner-icon">🫀</span></div>
-      <div class="proj-tile-body">
-        <div class="proj-tile-year">2026 · AI Platform · FYP</div>
-        <div class="proj-tile-name">Qalbify</div>
-        <div class="proj-tile-short">End-to-end AI emotional wellness platform with Qur'anic guidance — mobile app, web admin, and backend unified.</div>
-        <div class="proj-tile-stack">
-          <span class="mini-chip">React Native</span><span class="mini-chip">GPT-4o</span><span class="mini-chip">Node.js</span><span class="mini-chip">MongoDB</span>
-        </div>
-      </div>
-      <div class="proj-tile-arrow">→</div>
-    </div>
-    <div class="proj-tile reveal reveal-delay-2" data-cats="fullstack" data-project="food">
+    <div class="proj-tile reveal reveal-delay-1" data-cats="fullstack" data-project="food">
       <div class="proj-tile-banner food"><span class="banner-icon">🍜</span></div>
       <div class="proj-tile-body">
         <div class="proj-tile-year">2025 · Full-Stack MERN</div>
@@ -228,9 +313,17 @@
           <span class="mini-chip">React.js</span><span class="mini-chip">Express</span><span class="mini-chip">MongoDB</span>
         </div>
       </div>
+      <div class="proj-tile-actions">
+        <a href="https://github.com/Nimra-gul1/FoodFusion-Website.git" target="_blank" rel="noopener" title="GitHub Repository" class="tile-action-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://foodfusion-demo.vercel.app" target="_blank" rel="noopener" title="Live Demo" class="tile-action-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        </a>
+      </div>
       <div class="proj-tile-arrow">→</div>
     </div>
-    <div class="proj-tile reveal reveal-delay-3" data-cats="mobile" data-project="carzo">
+    <div class="proj-tile reveal reveal-delay-2" data-cats="mobile" data-project="carzo">
       <div class="proj-tile-banner carzo"><span class="banner-icon">🚗</span></div>
       <div class="proj-tile-body">
         <div class="proj-tile-year">2024 · Mobile App</div>
@@ -240,9 +333,14 @@
           <span class="mini-chip">React Native</span><span class="mini-chip">JavaScript</span>
         </div>
       </div>
+      <div class="proj-tile-actions">
+        <a href="https://github.com/Nimra-gul1/Car-APP.git" target="_blank" rel="noopener" title="GitHub Repository" class="tile-action-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
       <div class="proj-tile-arrow">→</div>
     </div>
-    <div class="proj-tile reveal reveal-delay-1" data-cats="uiux" data-project="tailoring">
+    <div class="proj-tile reveal reveal-delay-3" data-cats="uiux" data-project="tailoring">
       <div class="proj-tile-banner tailoring"><span class="banner-icon">🧵</span></div>
       <div class="proj-tile-body">
         <div class="proj-tile-year">2023 · UI/UX Design</div>
@@ -252,9 +350,14 @@
           <span class="mini-chip">Figma</span><span class="mini-chip">Prototyping</span>
         </div>
       </div>
+      <div class="proj-tile-actions">
+        <a href="https://www.figma.com/file/tailoring-management" target="_blank" rel="noopener" title="Figma Design" class="tile-action-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 0C2.239 0 0 2.239 0 5s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5zm9 0c-2.761 0-5 2.239-5 5s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5zm5 9c-2.761 0-5 2.239-5 5s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5z"/></svg>
+        </a>
+      </div>
       <div class="proj-tile-arrow">→</div>
     </div>
-    <div class="proj-tile reveal reveal-delay-2" data-cats="fullstack" data-project="bank">
+    <div class="proj-tile reveal reveal-delay-1" data-cats="fullstack" data-project="bank">
       <div class="proj-tile-banner bank"><span class="banner-icon">🏦</span></div>
       <div class="proj-tile-body">
         <div class="proj-tile-year">2023 · Software System</div>
@@ -264,9 +367,14 @@
           <span class="mini-chip">C++</span><span class="mini-chip">OOP</span>
         </div>
       </div>
+      <div class="proj-tile-actions">
+        <a href="https://github.com/Nimra-gul1/BankManagementSystem" target="_blank" rel="noopener" title="GitHub Repository" class="tile-action-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
       <div class="proj-tile-arrow">→</div>
     </div>
-    <div class="proj-tile reveal reveal-delay-3" data-cats="fullstack" data-project="library">
+    <div class="proj-tile reveal reveal-delay-2" data-cats="fullstack" data-project="library">
       <div class="proj-tile-banner library"><span class="banner-icon">📚</span></div>
       <div class="proj-tile-body">
         <div class="proj-tile-year">2022 · Software System</div>
@@ -276,10 +384,15 @@
           <span class="mini-chip">C++</span><span class="mini-chip">Data Structures</span>
         </div>
       </div>
+      <div class="proj-tile-actions">
+        <a href="https://github.com/Nimra-gul1/LibraryManagementSystem" target="_blank" rel="noopener" title="GitHub Repository" class="tile-action-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
       <div class="proj-tile-arrow">→</div>
     </div>
-    <div class="proj-tile reveal reveal-delay-1" data-cats="fullstack" data-project="student">
-      <div class="proj-tile-banner library" style="background: linear-gradient(135deg, #0A142A, #122448, #050E20);"><span class="banner-icon">🎓</span></div>
+    <div class="proj-tile reveal reveal-delay-3" data-cats="fullstack" data-project="student">
+      <div class="proj-tile-banner library" style="background:linear-gradient(135deg,#0A142A,#122448,#050E20);"><span class="banner-icon">🎓</span></div>
       <div class="proj-tile-body">
         <div class="proj-tile-year">2022 · Software System</div>
         <div class="proj-tile-name">Student Management System</div>
@@ -287,6 +400,11 @@
         <div class="proj-tile-stack">
           <span class="mini-chip">C++</span><span class="mini-chip">OOP</span>
         </div>
+      </div>
+      <div class="proj-tile-actions">
+        <a href="https://github.com/Nimra-gul1/StudentManagementSystem" target="_blank" rel="noopener" title="GitHub Repository" class="tile-action-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
       </div>
       <div class="proj-tile-arrow">→</div>
     </div>
@@ -304,7 +422,7 @@
       <div class="edu-period">2022 – 2026</div>
       <div class="edu-degree">Bachelor's in Software Engineering</div>
       <div class="edu-inst">Riphah International University, Islamabad</div>
-      <div class="edu-tag" style="background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.2); color: #34d399;">Completed / Graduated</div>
+      <div class="edu-tag" style="background:rgba(52,211,153,0.1);border-color:rgba(52,211,153,0.2);color:#34d399;">Completed / Graduated</div>
     </div>
     <div class="edu-card reveal reveal-delay-2">
       <div class="edu-period">2020 – 2022</div>
@@ -335,49 +453,27 @@
       <div class="contact-big">Let's build<br><span>something great.</span></div>
       <div class="contact-cards">
         <a class="contact-card" href="mailto:nimraofficial121@gmail.com">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-          </div>
-          <div>
-            <div class="contact-card-label">Email</div>
-            <div class="contact-card-value">nimraofficial121@gmail.com</div>
-          </div>
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg></div>
+          <div><div class="contact-card-label">Email</div><div class="contact-card-value">nimraofficial121@gmail.com</div></div>
           <span class="contact-arrow">→</span>
         </a>
         <a class="contact-card" href="tel:+923341019162">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.11 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
-          </div>
-          <div>
-            <div class="contact-card-label">Phone</div>
-            <div class="contact-card-value">+92 334 1019162</div>
-          </div>
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.11 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div>
+          <div><div class="contact-card-label">Phone</div><div class="contact-card-value">+92 334 1019162</div></div>
           <span class="contact-arrow">→</span>
         </a>
         <a class="contact-card" href="https://github.com/Nimra-gul1" target="_blank" rel="noopener">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-          </div>
-          <div>
-            <div class="contact-card-label">GitHub</div>
-            <div class="contact-card-value">github.com/Nimra-gul1</div>
-          </div>
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
+          <div><div class="contact-card-label">GitHub</div><div class="contact-card-value">github.com/Nimra-gul1</div></div>
           <span class="contact-arrow">→</span>
         </a>
         <a class="contact-card" href="https://www.linkedin.com/in/nimra-gul-25020b310" target="_blank" rel="noopener">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <div>
-            <div class="contact-card-label">LinkedIn</div>
-            <div class="contact-card-value">linkedin.com/in/nimra-gul-25020b310</div>
-          </div>
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div><div class="contact-card-label">LinkedIn</div><div class="contact-card-value">linkedin.com/in/nimra-gul-25020b310</div></div>
           <span class="contact-arrow">→</span>
         </a>
       </div>
     </div>
-
-    <!-- EMAIL CONTACT FORM -->
     <div class="contact-form-container">
       <form id="contactForm">
         <div class="form-group">
@@ -394,10 +490,7 @@
         </div>
         <button type="submit" class="form-submit-btn" id="submitBtn">
           <span>Send Message</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="22" y1="2" x2="11" y2="13"></line>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         </button>
         <div class="form-status" id="formStatus"></div>
       </form>
@@ -419,7 +512,7 @@
   </div>
 </div>
 
-<!-- FORMAL RESUME / CV MODAL -->
+<!-- CV MODAL -->
 <div class="cv-modal-overlay" id="cvModalOverlay">
   <div class="cv-modal-box" id="cvModalBox">
     <div class="cv-modal-header">
@@ -438,124 +531,70 @@
           <h1>NIMRA GUL</h1>
           <p class="resume-subtitle">Software Engineer</p>
           <div class="resume-meta">
-            <span><strong>Phone:</strong> 03341019162</span> | 
-            <span><strong>Email:</strong> nimraofficial121@gmail.com</span> | 
+            <span><strong>Phone:</strong> 03341019162</span> |
+            <span><strong>Email:</strong> nimraofficial121@gmail.com</span> |
             <span><strong>Location:</strong> Islamabad</span>
           </div>
         </header>
-        
         <section class="resume-section">
           <h2>Summary</h2>
-          <p>I am a tech driven software engineer with a strong foundation in both web and mobile application development. I work with React.js, React Native, Node.js, HTML, CSS, and JavaScript to create clean, responsive, and user-friendly digital experiences. I have experience building full stack applications, mobile apps and intuitive UI/UX designs that solve real-world problems. I enjoy developing innovative solutions, enhancing usability and designing efficient interfaces that improve the overall user experience. I am passionate about learning new technologies, tackling complex challenges and staying updated with current trends in the software development landscape. I aim to contribute to meaningful projects where I can apply my skills, collaborate effectively, and deliver high-quality solutions.</p>
+          <p>I am a tech driven software engineer with a strong foundation in both web and mobile application development. I work with React.js, React Native, Node.js, HTML, CSS, and JavaScript to create clean, responsive, and user-friendly digital experiences. I have experience building full stack applications, mobile apps and intuitive UI/UX designs that solve real-world problems.</p>
         </section>
-
         <section class="resume-section">
           <h2>Key Achievements</h2>
           <ul>
-            <li>Successfully developed and delivered Qalbify, an end-to-end AI-powered emotional wellness platform integrating mobile app, web admin panel, and backend system into a single unified product.</li>
+            <li>Successfully developed and delivered Qalbify, an end-to-end AI-powered emotional wellness platform integrating mobile app, web admin panel, and backend system.</li>
             <li>Built a meaningful real-world solution focused on improving emotional and spiritual well-being through intelligent, user-centered digital experiences.</li>
-            <li>Designed and developed a complete Tailoring Management System UI/UX prototype, improving workflow efficiency for order customization, tracking, and customer management processes.</li>
-            <li>Demonstrated strong capability to independently convert real-world problems into structured, functional software solutions with practical usability.</li>
+            <li>Designed and developed a complete Tailoring Management System UI/UX prototype.</li>
+            <li>Demonstrated strong capability to independently convert real-world problems into structured, functional software solutions.</li>
           </ul>
         </section>
-
         <section class="resume-section">
           <h2>Technical Skills & Expertise</h2>
           <div class="resume-skills-grid">
-            <div class="resume-skills-col">
-              <strong>Core Development:</strong> React.js, React Native, Node.js, Express.js, MongoDB, REST APIs
-            </div>
-            <div class="resume-skills-col">
-              <strong>Languages & Web Technologies:</strong> JavaScript, TypeScript, HTML5, CSS3, C++
-            </div>
-            <div class="resume-skills-col">
-              <strong>Tools & Hosting:</strong> Git, GitHub, API Integration, Postman, Figma, Linux, Vercel
-            </div>
-            <div class="resume-skills-col">
-              <strong>Professional Expertise:</strong> UI/UX Designing, Wireframing, Project Management, Problem Solving, Teamwork, Leadership
-            </div>
+            <div class="resume-skills-col"><strong>Core Development:</strong> React.js, React Native, Node.js, Express.js, MongoDB, REST APIs</div>
+            <div class="resume-skills-col"><strong>Languages & Web:</strong> JavaScript, TypeScript, HTML5, CSS3, C++</div>
+            <div class="resume-skills-col"><strong>Tools & Hosting:</strong> Git, GitHub, Postman, Figma, Linux, Vercel</div>
+            <div class="resume-skills-col"><strong>Professional:</strong> UI/UX Designing, Wireframing, Project Management, Problem Solving</div>
           </div>
         </section>
-
         <section class="resume-section">
           <h2>Projects</h2>
           <div class="resume-proj-item">
-            <div class="resume-proj-header">
-              <strong>Qalbify (Final Year Project)</strong>
-              <span>2026</span>
-            </div>
+            <div class="resume-proj-header"><strong>Qalbify (Final Year Project)</strong><span>2026</span></div>
             <ul>
               <li>Developed an AI-driven Android app using React Native (Expo) and a web-based admin panel using React.js.</li>
-              <li>Built backend services using Node.js, Express.js, and MongoDB Atlas with a custom Qur’an dataset.</li>
-              <li>Integrated emotion detection using Hugging Face Inference API (DistilRoBERTa) to analyze user emotions.</li>
-              <li>Used OpenAI API and AssemblyAI for intelligent responses and voice-based interaction features.</li>
-              <li>Implemented secure authentication using JWT, bcrypt, and Google OAuth; deployed the system on Vercel.</li>
+              <li>Built backend services using Node.js, Express.js, and MongoDB Atlas with a custom Qur'an dataset.</li>
+              <li>Integrated emotion detection using Hugging Face Inference API (DistilRoBERTa).</li>
+              <li>Used OpenAI API and AssemblyAI for intelligent responses and voice-based interaction.</li>
+              <li>Implemented secure authentication using JWT, bcrypt, and Google OAuth; deployed on Vercel.</li>
             </ul>
           </div>
-
           <div class="resume-proj-item">
-            <div class="resume-proj-header">
-              <strong>Food Fusion</strong>
-              <span>2025</span>
-            </div>
+            <div class="resume-proj-header"><strong>Food Fusion</strong><span>2025</span></div>
             <ul>
-              <li>Developed a full-stack MERN application for a food ordering system with category filter menu, checkout cart, and a custom admin dashboard.</li>
-              <li>Built functionality for user authentication and order history tracking, managing menus and order handling.</li>
+              <li>Developed a full-stack MERN application for a food ordering system with category filter menu, checkout cart, and admin dashboard.</li>
             </ul>
           </div>
-
           <div class="resume-proj-item">
-            <div class="resume-proj-header">
-              <strong>Carzo</strong>
-              <span>2024</span>
-            </div>
+            <div class="resume-proj-header"><strong>Carzo</strong><span>2024</span></div>
             <ul>
-              <li>Built a mobile application using React Native and JavaScript to provide emergency car repair services.</li>
-              <li>Included booking system, service status tracking, push notifications, and customer feedback collection.</li>
+              <li>Built a mobile application using React Native for emergency car repair services with booking and tracking.</li>
             </ul>
           </div>
-
           <div class="resume-proj-item">
-            <div class="resume-proj-header">
-              <strong>Tailoring Management System</strong>
-              <span>2023</span>
-            </div>
-            <ul>
-              <li>Designed a complete Figma prototype covering custom tailoring measurements, order tracking, and client logs.</li>
-            </ul>
+            <div class="resume-proj-header"><strong>Bank Management System</strong><span>2023</span></div>
+            <ul><li>Developed a C++ system managing accounts, deposits, withdrawals, and ledger tracking.</li></ul>
           </div>
-
           <div class="resume-proj-item">
-            <div class="resume-proj-header">
-              <strong>Bank Management System</strong>
-              <span>2023</span>
-            </div>
-            <ul>
-              <li>Developed a software system in C++ managing accounts, deposits, withdrawals, and ledger transaction tracking.</li>
-            </ul>
+            <div class="resume-proj-header"><strong>Library Management System</strong><span>2022</span></div>
+            <ul><li>Developed a C++ system handling book categories, issue/return operations, and student borrowing logs.</li></ul>
           </div>
-
           <div class="resume-proj-item">
-            <div class="resume-proj-header">
-              <strong>Library Management System</strong>
-              <span>2022</span>
-            </div>
-            <ul>
-              <li>Developed a C++ system handling book categories, issue/return operations, and student borrowing logs.</li>
-            </ul>
-          </div>
-
-          <div class="resume-proj-item">
-            <div class="resume-proj-header">
-              <strong>Student Management System</strong>
-              <span>2022</span>
-            </div>
-            <ul>
-              <li>Developed a C++ terminal application to manage student indexes, directories, attendance logs, and GPAs.</li>
-            </ul>
+            <div class="resume-proj-header"><strong>Student Management System</strong><span>2022</span></div>
+            <ul><li>Developed a C++ terminal application to manage student indexes, attendance logs, and GPAs.</li></ul>
           </div>
         </section>
-
         <section class="resume-section">
           <h2>Education</h2>
           <div class="resume-edu-item">
@@ -567,7 +606,6 @@
             <span class="resume-date">2020 – 2022</span>
           </div>
         </section>
-
         <section class="resume-section">
           <h2>Languages</h2>
           <p>English, Urdu</p>

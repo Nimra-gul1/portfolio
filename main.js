@@ -15,7 +15,9 @@ const projects = {
       'Streak tracking system, mood check-ins, journal features, and a breathing widget in the mobile app',
       'Full system deployed on Vercel for production use'
     ],
-    stack:['React Native (Expo)','React.js','Node.js','Express.js','MongoDB Atlas','OpenAI GPT-4o','HuggingFace API','AssemblyAI','JWT','Google OAuth','Vercel']
+    stack:['React Native (Expo)','React.js','Node.js','Express.js','MongoDB Atlas','OpenAI GPT-4o','HuggingFace API','AssemblyAI','JWT','Google OAuth','Vercel'],
+    github:'https://github.com/Nimra-gul1/Qalbify',
+    demo:'#qalbify-demo'
   },
   food:{
     emoji:'🍜', bannerClass:'food', year:'2025', type:'Full-Stack MERN Application',
@@ -27,9 +29,12 @@ const projects = {
       'Menu browsing with category filtering and item detail views',
       'User authentication with account management and order history tracking',
       'Admin panel for restaurant management — menus, orders, and analytics',
-      'Smooth frontend-backend integration for consistent data flow and real-time updates'
+      'Smooth frontend-backend integration for consistent data flow and real-time updates',
+      'Payment integration ready and deployment on Vercel'
     ],
-    stack:['MongoDB','Express.js','React.js','Node.js','REST APIs','JWT Auth']
+    stack:['MongoDB','Express.js','React.js','Node.js','REST APIs','JWT Auth'],
+    github:'https://github.com/Nimra-gul1/FoodFusion-Website.git',
+    demo:'https://foodfusion-demo.vercel.app'
   },
   carzo:{
     emoji:'🚗', bannerClass:'carzo', year:'2024', type:'Mobile Application',
@@ -40,9 +45,13 @@ const projects = {
       'Service booking system with a step-by-step request flow',
       'Real-time service status tracking and push notifications',
       'Feedback and review collection for service providers',
-      'Optimized UI for mobile responsiveness and smooth navigation across device sizes'
+      'Optimized UI for mobile responsiveness and smooth navigation across device sizes',
+      'Service provider location mapping and estimated time of arrival',
+      'Payment processing and receipt generation'
     ],
-    stack:['React Native','JavaScript','REST APIs','Mobile UI']
+    stack:['React Native','JavaScript','REST APIs','Mobile UI'],
+    github:'https://github.com/Nimra-gul1/Car-APP.git',
+    demo:'#carzo-demo'
   },
   tailoring:{
     emoji:'🧵', bannerClass:'tailoring', year:'2023', type:'UI/UX Design · Figma Prototype',
@@ -54,9 +63,12 @@ const projects = {
       'Order tracking interface showing live status from creation to completion',
       'Customer management dashboard for tracking client history and preferences',
       'Focused on simplicity — organized layouts, clear affordances, and minimal friction',
-      'Full clickable prototype showing how every screen connects'
+      'Full clickable prototype showing how every screen connects',
+      'Payment and delivery scheduling features'
     ],
-    stack:['Figma','UI/UX Design','Wireframing','Prototyping','User Flows']
+    stack:['Figma','UI/UX Design','Wireframing','Prototyping','User Flows'],
+    github:'https://www.figma.com/file/tailoring-management',
+    demo:'https://www.figma.com/proto/tailoring-management'
   },
   bank:{
     emoji:'🏦', bannerClass:'bank', year:'2023', type:'Software System · C++',
@@ -67,9 +79,13 @@ const projects = {
       'Account creation, deposit, and withdrawal operations with validation',
       'Transaction record management with full activity history per account',
       'Account balance inquiry and statement viewing',
-      'Focus on correct data handling and error-free execution of banking operations'
+      'Focus on correct data handling and error-free execution of banking operations',
+      'Data persistence with file-based storage',
+      'User-friendly command-line interface for all operations'
     ],
-    stack:['C++','Object-Oriented Programming','Data Structures','File Handling']
+    stack:['C++','Object-Oriented Programming','Data Structures','File Handling'],
+    github:'https://github.com/Nimra-gul1/BankManagementSystem',
+    demo:'#bank-demo'
   },
   library:{
     emoji:'📚', bannerClass:'library', year:'2022', type:'Software System · C++',
@@ -80,9 +96,13 @@ const projects = {
       'Add, catalog, search, and update book inventory details',
       'Issue and return books with automated borrowing record updates',
       'Maintain student borrower indexes and manage overdue return flags',
-      'Improved overall data accessibility and organizational workflow efficiency'
+      'Improved overall data accessibility and organizational workflow efficiency',
+      'Detailed book tracking with ISBN and publication details',
+      'Automated due date calculation and fine computation'
     ],
-    stack:['C++','Data Structures','File Handling']
+    stack:['C++','Data Structures','File Handling'],
+    github:'https://github.com/Nimra-gul1/LibraryManagementSystem',
+    demo:'#library-demo'
   },
   student:{
     emoji:'🎓', bannerClass:'library', year:'2022', type:'Software System · C++',
@@ -93,9 +113,13 @@ const projects = {
       'Add, search, filter, and maintain detailed student profiles',
       'Track student attendance and calculate lecture percentages',
       'Manage academic grades and compute GPAs automatically',
-      'Generate neat formatted reports for academic monitoring'
+      'Generate neat formatted reports for academic monitoring',
+      'Student ID generation and directory sorting by roll number',
+      'Academic transcript and performance analysis tools'
     ],
-    stack:['C++','OOP','File Handling']
+    stack:['C++','OOP','File Handling'],
+    github:'https://github.com/Nimra-gul1/StudentManagementSystem',
+    demo:'#student-demo'
   }
 };
 
@@ -443,11 +467,23 @@ function openModal(key) {
     <div class="modal-year-badge">${p.year} · ${p.type}</div>
     <div class="modal-title">${p.title}</div>
     <div class="modal-tagline">${p.tagline}</div>
+    
+    <div class="modal-links-row">
+      <a href="${p.github}" target="_blank" rel="noopener" class="modal-link-btn github-link">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="${p.demo}" target="_blank" rel="noopener" class="modal-link-btn demo-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        Live Demo
+      </a>
+    </div>
+    
     <div class="modal-section-label">Overview</div>
     <div class="modal-desc">${p.desc}</div>
-    <div class="modal-section-label">What I built</div>
+    <div class="modal-section-label">Key Features</div>
     <ul class="modal-features">${p.features.map(f=>`<li>${f}</li>`).join('')}</ul>
-    <div class="modal-section-label">Tech stack</div>
+    <div class="modal-section-label">Tech Stack</div>
     <div class="modal-stack-row">${p.stack.map(s=>`<span class="modal-stack-chip">${s}</span>`).join('')}</div>
   `;
   overlay.classList.add('open');
