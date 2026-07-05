@@ -17,9 +17,9 @@ const projects = {
     ],
     stack:['React Native (Expo)','React.js','Node.js','Express.js','MongoDB Atlas','OpenAI GPT-4o','HuggingFace API','AssemblyAI','JWT','Google OAuth','Vercel'],
     github:'https://github.com/Nimra-gul1/Qalbify',
-    demo:'videos/qalbify-app1.mp4',
-    demo2:'videos/qalbify-app2.mp4',
-    demo3:'videos/qalbify-web.mp4'
+    demo:'https://drive.google.com/file/d/1XrmDROffLcvQSY6Yo_uydoSRFCZ-btz6/view',
+    demo2:'https://drive.google.com/file/d/1H92kAwod7zVvH3XQe8nuWplCt3-hjhuj/view',
+    demo3:'https://drive.google.com/file/d/10tim27xQJECKj28271-ipXME2dbckzvd/view'
   },
   food:{
     emoji:'🍜', bannerClass:'food', year:'2025', type:'Full-Stack MERN Application',
@@ -36,7 +36,7 @@ const projects = {
     ],
     stack:['MongoDB','Express.js','React.js','Node.js','REST APIs','JWT Auth'],
     github:'https://github.com/Nimra-gul1/FoodFusion-Website.git',
-    demo:'videos/foodfusion.mp4'
+    demo:'https://drive.google.com/file/d/1tH6WiKa7tj8IfKVVy2tTftIdi-BAw2vC/view'
   },
   carzo:{
     emoji:'🚗', bannerClass:'carzo', year:'2024', type:'Mobile Application',
@@ -53,7 +53,7 @@ const projects = {
     ],
     stack:['React Native','JavaScript','REST APIs','Mobile UI'],
     github:'https://github.com/Nimra-gul1/Car-APP.git',
-    demo:'videos/car.mp4'
+    demo:'https://drive.google.com/file/d/1xEpn7J0eQb_oiJILliAbmLSvLLMLJxlA/view'
   },
   tailoring:{
     emoji:'🧵', bannerClass:'tailoring', year:'2023', type:'UI/UX Design · Figma Prototype',
@@ -87,7 +87,7 @@ const projects = {
     ],
     stack:['C++','Object-Oriented Programming','Data Structures','File Handling'],
     github:'https://github.com/Nimra-gul1/Banking-website.git',
-    demo:'videos/bank.mp4'
+    demo:'https://drive.google.com/file/d/1gw6ceQfLV1c0YlpAZNfkyIJkeiGe0xnJ/view'
   },
   library:{
     emoji:'📚', bannerClass:'library', year:'2022', type:'Software System · C++',
@@ -104,7 +104,7 @@ const projects = {
     ],
     stack:['C++','Data Structures','File Handling'],
     github:'https://github.com/Nimra-gul1/library-management-system.git',
-    demo:'videos/library.mp4'
+    demo:'https://drive.google.com/file/d/12-Jam2vSbmSMRlQWH-82JuFcCdpicm--/view'
   },
   student:{
     emoji:'🎓', bannerClass:'library', year:'2022', type:'Software System · C++',
@@ -121,7 +121,7 @@ const projects = {
     ],
     stack:['C++','OOP','File Handling'],
     github:'https://github.com/Nimra-gul1/student-management-system.git',
-    demo:'videos/student.mp4'
+    demo:'https://drive.google.com/file/d/1HPbcqjt0B7asaRqO35V7AKnK4JFoCwrG/view'
   }
 };
 
