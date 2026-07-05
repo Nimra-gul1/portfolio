@@ -3,8 +3,8 @@ const projects = {
   qalbify:{
     emoji:'🫀', bannerClass:'qalbify', year:'2026', type:'AI Platform · Final Year Project',
     title:'Qalbify',
-    tagline:"AI-powered emotional wellness with Qur'anic guidance.",
-    desc:"Qalbify is an end-to-end AI-powered emotional wellness platform I built as my Final Year Project. It combines a React Native mobile app, a React.js web admin panel, and a Node.js/MongoDB backend into a single production-ready system — deployed on Vercel.",
+    tagline:'AN AI POWERED SPIRITUAL AND EMOTIONAL COMPANION',
+    desc:"Qalbify is an AI-driven android and web-based platform designed to support emotional and spiritual well-being. The mobile application analyzes user emotions using a hugging face NLP model and provides empathetic responses along with relevant Qur’anic verses and translations fetched from a custom dataset stored in MongoDB. The web-based admin panel includes user management, red flag monitoring, hallucination detection, content control, and system analytics.",
     features:[
       'Emotion detection via HuggingFace DistilRoBERTa Inference API — analyzes user emotional state in real time',
       'OpenAI GPT-4o for empathetic, context-aware conversational responses',
