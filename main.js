@@ -17,7 +17,9 @@ const projects = {
     ],
     stack:['React Native (Expo)','React.js','Node.js','Express.js','MongoDB Atlas','OpenAI GPT-4o','HuggingFace API','AssemblyAI','JWT','Google OAuth','Vercel'],
     github:'https://github.com/Nimra-gul1/Qalbify',
-    demo:'#qalbify-demo'
+    demo:'videos/qalbify-app1.mp4',
+    demo2:'videos/qalbify-app2.mp4',
+    demo3:'videos/qalbify-web.mp4'
   },
   food:{
     emoji:'🍜', bannerClass:'food', year:'2025', type:'Full-Stack MERN Application',
@@ -34,7 +36,7 @@ const projects = {
     ],
     stack:['MongoDB','Express.js','React.js','Node.js','REST APIs','JWT Auth'],
     github:'https://github.com/Nimra-gul1/FoodFusion-Website.git',
-    demo:'https://foodfusion-demo.vercel.app'
+    demo:'videos/foodfusion.mp4'
   },
   carzo:{
     emoji:'🚗', bannerClass:'carzo', year:'2024', type:'Mobile Application',
@@ -51,7 +53,7 @@ const projects = {
     ],
     stack:['React Native','JavaScript','REST APIs','Mobile UI'],
     github:'https://github.com/Nimra-gul1/Car-APP.git',
-    demo:'#carzo-demo'
+    demo:'videos/car.mp4'
   },
   tailoring:{
     emoji:'🧵', bannerClass:'tailoring', year:'2023', type:'UI/UX Design · Figma Prototype',
@@ -85,7 +87,7 @@ const projects = {
     ],
     stack:['C++','Object-Oriented Programming','Data Structures','File Handling'],
     github:'https://github.com/Nimra-gul1/Banking-website.git',
-    demo:'#bank-demo'
+    demo:'videos/bank.mp4'
   },
   library:{
     emoji:'📚', bannerClass:'library', year:'2022', type:'Software System · C++',
@@ -102,7 +104,7 @@ const projects = {
     ],
     stack:['C++','Data Structures','File Handling'],
     github:'https://github.com/Nimra-gul1/library-management-system.git',
-    demo:'#library-demo'
+    demo:'videos/library.mp4'
   },
   student:{
     emoji:'🎓', bannerClass:'library', year:'2022', type:'Software System · C++',
@@ -119,7 +121,7 @@ const projects = {
     ],
     stack:['C++','OOP','File Handling'],
     github:'https://github.com/Nimra-gul1/student-management-system.git',
-    demo:'#student-demo'
+    demo:'videos/student.mp4'
   }
 };
 
@@ -475,7 +477,15 @@ function openModal(key) {
       </a>` : ''}
       ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="modal-link-btn demo-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
-        Live Demo
+        Demo
+      </a>` : ''}
+      ${p.demo2 ? `<a href="${p.demo2}" target="_blank" rel="noopener" class="modal-link-btn demo-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        Demo 2
+      </a>` : ''}
+      ${p.demo3 ? `<a href="${p.demo3}" target="_blank" rel="noopener" class="modal-link-btn demo-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        Demo 3
       </a>` : ''}
       ${p.linkedin1 ? `<a href="${p.linkedin1}" target="_blank" rel="noopener" class="modal-link-btn github-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
