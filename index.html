@@ -712,7 +712,7 @@
 
   <script src="main.js"></script>
   <script>
-    // ── CONTACT FORM via FormSubmit.co ──
+    // ── CONTACT FORM via Web3Forms ──
     const contactForm = document.getElementById('contactForm');
     const submitBtn   = document.getElementById('submitBtn');
     const formStatus  = document.getElementById('formStatus');
@@ -725,28 +725,26 @@
         formStatus.textContent = '';
         formStatus.className = 'form-status';
 
-        const data = {
-          name:    document.getElementById('formName').value.trim(),
-          email:   document.getElementById('formEmail').value.trim(),
-          message: document.getElementById('formMessage').value.trim(),
-          _subject: 'New message from your Portfolio',
-          _captcha: 'false',
-          _template: 'table'
-        };
+        const formData = new FormData();
+        formData.append('access_key', '0edffba0-a84d-41ba-9b93-9c146dff18fd');
+        formData.append('name',    document.getElementById('formName').value.trim());
+        formData.append('email',   document.getElementById('formEmail').value.trim());
+        formData.append('message', document.getElementById('formMessage').value.trim());
+        formData.append('subject', 'New Portfolio Message');
+        formData.append('from_name', 'Portfolio Contact Form');
 
         try {
-          const res = await fetch('https://formsubmit.co/ajax/nimraofficial121@gmail.com', {
+          const res = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(data)
+            body: formData
           });
           const json = await res.json();
-          if (json.success === 'true' || json.success === true) {
+          if (json.success) {
             formStatus.textContent = '✅ Message sent! I will get back to you soon.';
             formStatus.className = 'form-status success';
             contactForm.reset();
           } else {
-            throw new Error('Submission failed');
+            throw new Error(json.message || 'Submission failed');
           }
         } catch(err) {
           formStatus.textContent = '❌ Something went wrong. Please email me at nimraofficial121@gmail.com';
