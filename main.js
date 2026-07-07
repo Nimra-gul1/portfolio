@@ -408,51 +408,9 @@ cards.forEach(card => {
   });
 });
 
-/* ── CONTACT FORM HANDLER (MOCK SUCCESS) ── */
-const contactForm = document.getElementById('contactForm');
-const formStatus = document.getElementById('formStatus');
-const submitBtn = document.getElementById('submitBtn');
+/* ── CONTACT FORM HANDLER ── */
+// The real contact form logic using Web3Forms is located in index.html
 
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const name = document.getElementById('formName').value;
-    const email = document.getElementById('formEmail').value;
-    const message = document.getElementById('formMessage').value;
-    
-    // Disable inputs & show loading status
-    submitBtn.disabled = true;
-    const origBtnText = submitBtn.querySelector('span').innerText;
-    submitBtn.querySelector('span').innerText = 'Sending...';
-    
-    setTimeout(() => {
-      // Create mock success feedback
-      formStatus.innerText = `Thanks ${name}! Nimra will get back to you shortly.`;
-      formStatus.className = 'form-status success';
-      
-      // Store in LocalStorage for demonstration / persistence
-      const submissions = JSON.parse(localStorage.getItem('portfolio-contacts') || '[]');
-      submissions.push({ name, email, message, date: new Date().toISOString() });
-      localStorage.setItem('portfolio-contacts', JSON.stringify(submissions));
-      
-      // Reset Form & Button
-      contactForm.reset();
-      submitBtn.disabled = false;
-      submitBtn.querySelector('span').innerText = origBtnText;
-      
-      // Fade out status after 5s
-      setTimeout(() => {
-        formStatus.style.opacity = '0';
-        setTimeout(() => {
-          formStatus.className = 'form-status';
-          formStatus.style.opacity = '';
-        }, 300);
-      }, 5000);
-      
-    }, 1500);
-  });
-}
 
 /* ── MODAL LOGIC ── */
 const overlay = document.getElementById('modalOverlay');
