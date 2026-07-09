@@ -605,6 +605,7 @@ nav.scrolled {
 .proj-tile:hover { border-color: var(--border); transform: translateY(-8px) scale(1.01); box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
 .proj-tile-banner { height: 190px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 3.8rem; transition: transform 0.5s ease; }
 .proj-tile:hover .proj-tile-banner { transform: scale(1.05); }
+.proj-tile-banner.shophub { background: linear-gradient(135deg, #011824, #012C3A, #001018); }
 .proj-tile-banner.qalbify { background: linear-gradient(135deg, #18092B, #260D49, #130722); }
 .proj-tile-banner.food { background: linear-gradient(135deg, #1C0F02, #291703, #150B01); }
 .proj-tile-banner.carzo { background: linear-gradient(135deg, #011C1C, #022C2C, #001212); }

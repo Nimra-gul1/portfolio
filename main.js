@@ -1,5 +1,24 @@
 /* ── PROJECT DATA ── */
 const projects = {
+  shophub:{
+    emoji:'🛒', bannerClass:'shophub', year:'2026', type:'Full-Stack E-Commerce Platform',
+    title:'ShopHub',
+    tagline:'A PRODUCTION-READY FULL-STACK E-COMMERCE EXPERIENCE',
+    desc:'ShopHub is a production-ready full-stack e-commerce application that delivers a complete online shopping experience — from product discovery and secure authentication to checkout and order management. It also includes a comprehensive admin dashboard for managing products, customers, orders, and store operations.',
+    features:[
+      'Secure JWT authentication with role-based access control for users and administrators',
+      'Product catalog with live search, advanced filtering, sorting, categories, brands, ratings, and price ranges',
+      'Fully functional shopping cart, wishlist, coupon system, shipping calculation, and checkout workflow',
+      'Product reviews and ratings with verified purchase support',
+      'Admin dashboard featuring sales analytics, inventory management, order tracking, and customer management',
+      'Complete CRUD operations for products, categories, and coupons via admin panel',
+      'Responsive, modern UI with smooth animations, loading states, empty states, and real-time toast notifications',
+      'RESTful API architecture with secure backend validation and MongoDB database integration'
+    ],
+    stack:['React (Vite)','Tailwind CSS','React Router','Context API','Axios','Framer Motion','Node.js','Express.js','MongoDB','Mongoose','JWT','bcrypt'],
+    github:'https://github.com/Nimra-gul1/ShophubEcommerce-website.git',
+    demo:'https://drive.google.com/file/d/1vBoxGYDg5Qs_TfFHSRgRpbhvwxBbmHSl/view?usp=drive_link'
+  },
   qalbify:{
     emoji:'🫀', bannerClass:'qalbify', year:'2026', type:'AI Platform · Final Year Project',
     title:'Qalbify',
@@ -477,6 +496,11 @@ document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal();
 
 document.querySelectorAll('.proj-tile').forEach(tile => {
   tile.addEventListener('click', () => openModal(tile.dataset.project));
+});
+
+// Prevent icon links (GitHub, Demo) from also triggering the modal
+document.querySelectorAll('.tile-action-icon').forEach(link => {
+  link.addEventListener('click', e => e.stopPropagation());
 });
 
 /* ── FILTER ── */
