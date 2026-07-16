@@ -471,15 +471,15 @@ function openModal(key) {
       </a>` : ''}
       ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="modal-link-btn demo-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
-        Demo
+        Live Demo
       </a>` : ''}
       ${p.demo2 ? `<a href="${p.demo2}" target="_blank" rel="noopener" class="modal-link-btn demo-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
-        Demo 2
+        Live Demo 2
       </a>` : ''}
       ${p.demo3 ? `<a href="${p.demo3}" target="_blank" rel="noopener" class="modal-link-btn demo-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
-        Demo 3
+        Live Demo 3
       </a>` : ''}
       ${p.linkedin1 ? `<a href="${p.linkedin1}" target="_blank" rel="noopener" class="modal-link-btn github-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
