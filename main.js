@@ -1,5 +1,22 @@
 /* ── PROJECT DATA ── */
 const projects = {
+  threatconsole:{
+    emoji:'🛡️', bannerClass:'threatconsole', year:'2026', type:'Security Lab · Full-Stack',
+    title:'Threat Console',
+    tagline:'A LIVE-ACTION SECURITY LAB AND DASHBOARD',
+    desc:'A full-stack, real-time security console featuring a live TCP port scanner and a local network ARP discovery radar. Built to demonstrate networking concepts and provide functional cybersecurity utilities directly in the browser.',
+    features:[
+      'Live TCP port scanner that resolves open, closed, and filtered ports in real time via Server-Sent Events (SSE)',
+      'Network radar sweep using ARP table discovery to map active physical devices on the local subnet',
+      'Parallelized backend execution optimized for Vercel serverless functions to bypass execution timeouts',
+      'Client-side Hash Generator (SHA-1, SHA-256) via Web Crypto API',
+      'Advanced Password Strength Analyzer evaluating entropy and common patterns',
+      'Interactive CTF (Capture The Flag) challenges evaluating vulnerability awareness'
+    ],
+    stack:['Node.js','Express.js','Server-Sent Events (SSE)','Web Crypto API','Vercel Serverless'],
+    github:'https://github.com/Nimra-gul1/threat-console',
+    demo:'https://threat-console.vercel.app/'
+  },
   shophub:{
     emoji:'🛒', bannerClass:'shophub', year:'2026', type:'Full-Stack E-Commerce Platform',
     title:'ShopHub',
